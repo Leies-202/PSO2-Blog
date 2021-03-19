@@ -1,17 +1,20 @@
 backend:
   name: github
   repo: leies-202/pso2-blog
-  public_folder: "/public"
-  media_folder: "static/images"
-  collections:
-  - label: "Blog"
-    name: "blog"
-    folder: "content/blog"
+public_folder: "/public"
+media_folder: "static/images"
+collections:
+  - name: 'blog'
+    label: 'Blog'
+    folder: 'content/blog'
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Markdownのファイル名　例：YYYY-MM-DD-title.md
-    fields: # ページ作成画面で使う。Front Matterの値を書く
-      - {label: "タイトル", name: "title", widget: "string"}
-      - {label: "公開日", name: "date", widget: "datetime"}
-      - {label: "サムネイル画像", name: "thumbnail", widget: "image"}
-      - {label: "レーティング", name: "rating", widget: "number"}
-      - {label: "本文", name: "body", widget: "markdown"}
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    editor:
+      preview: false
+    fields:
+      - { label: 'タイトル', name: 'title', widget: 'string' }
+      - { label: '公開日', name: 'date', widget: 'datetime' }
+      - { label: "サムネイル画像", name: "thumbnail", widget: "image"}
+      - { label: "レーティング", name: "rating", widget: "number"}
+      - { label: '概要', name: 'description', widget: 'string' }
+      - { label: '本文', name: 'body', widget: 'markdown' }
