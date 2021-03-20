@@ -13,7 +13,6 @@ collections:
       preview: false
     fields:
       - { label: 'タイトル', name: 'title', widget: 'string' }
-      - { label: '書いた人', name: 'author', widget: 'string'　}
       - { label: '公開日', name: 'date', widget: 'datetime' }
       - { label: "サムネイル画像", name: "image", widget: "image"}
       - { label: '概要', name: 'description', widget: 'string' }
