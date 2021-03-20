@@ -6,15 +6,15 @@ media_folder: "static/images"
 collections:
   - name: 'blog'
     label: 'Blog'
-    folder: 'content/blog'
+    folder: 'content/post'
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     editor:
       preview: false
     fields:
       - { label: 'タイトル', name: 'title', widget: 'string' }
+      - { label: '書いた人', name: 'author', widget: 'string', default: 'レイエス'　}
       - { label: '公開日', name: 'date', widget: 'datetime' }
-      - { label: "サムネイル画像", name: "thumbnail", widget: "image"}
-      - { label: "レーティング", name: "rating", widget: "number"}
+      - { label: "サムネイル画像", name: "image", widget: "image"}
       - { label: '概要', name: 'description', widget: 'string' }
       - { label: '本文', name: 'body', widget: 'markdown' }
